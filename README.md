@@ -108,7 +108,6 @@ git braco <branchname>
 /* --- Solved Your BUG ---- */
 /* ------------------------ */
 
-
 // Commit All your files to staging with a message
 git stacoma <msg>
 
@@ -117,8 +116,6 @@ git brao main
 
 // Merge branch into main
 git bram <branchname>
-
-  
 ```
 
 
