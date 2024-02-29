@@ -1,175 +1,108 @@
-# Git &amp; Github Cheat Sheet by 3SN
-3sn.cheatsheet
+## Git &amp; Github Cheat Sheet by 3SN
+3sn.cheatsheet   
+All ALIASES are stored in a local file, named **.gitconfig**.   
+On a Windows system, this file is located in the folder **C:\Users\\<user_name>\\.gitconfig**
 
-## Youtube resources
+### Youtube resources
 
 [The very basics](https://www.youtube.com/watch?v=mJ-qvsxPHpY)   
 [A bit more advanced, though still very understandable](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
-## Defining your name and email
 ```csharp
+// Defining your name and email
+
 /* These settings will be used in ALL your repo's. */
 /* Has to be done only once                        */ 
 git config --global user.name  "Your Name"
 git config --global user.email "Your email"
 ```
 
-## Initialising your LOCAL repo
+### Initialising your LOCAL repo
 ```csharp
-/* Has to be done only once PER PROJECT            */ 
-
-/* 
+/* Has to be done only once PER PROJECT          
 === Remark ====
 I strongly recommend to:   
 1. Create your project on Github 
 2. and clone it locally 
-3. Merge the .git folder and the readme file with your local files..
-*/
+3. Merge the .git folder and the readme file with your local files.. */
 
 // Other solution:
 git init // In local Project Folder.
 ```
 
-## CREATE / DEFINE Aliases
-
 ```csharp
+// CREATE / DEFINE Aliases
 git config --global alias.<alias_name> "<git_command>"
 
 // Example
 git config --global alias.co "checkout"
 ```
 
-## Overview ALIASES
-All ALIASES are stored in a local file, named **.gitconfig**.   
-On a Windows system, this file is located in the folder **C:\Users\\<user_name>\\.gitconfig**
-
-
-## COMMON aliases
+### COMMON aliases
 ```csharp 
-// Status
-// -- git status
-  git stat  
+// Status .:. Current situation
+git stat // -- git status
+
+// Log in 1 line
+git lo1 // -- log --oneline
+
+// Tree show log in tree format
+git tree // -- log --oneline --graph --decorate --all
 ```
 
-## BRANCHES aliases
+## BRANCHES ( bra_ ) aliases
 ```csharp 
-// 1. CREATE a new branch with the specified name. 
-//   -- git branch <branch-name>
-  git brc <branch_name>
+// 1. BRANCH CREATE .:. Creates a branch with a specified name. 
+git brac <new_branch_name> // -- git branch <branch-name>
 
-// 2. CHECK OUT / SWITCH TO a specified branch.
-//   -- git checkout <branch-name>
-git bro <branch_name>       
+// 2. BRANCH checkOUT / SWITCH TO a specified branch.
+git brao <branch_name> // -- git checkout <branch-name>       
 
-// 1 & 2 CREATE & CHECK OUT / SWITCH TO a specified branch.
-//   -- git checkout -b <new-branch-name>
-git brco <new_branch_name> 
+// 1 & 2 BRANCH CREATE & check OUT / SWITCH TO a specified branch.
+git braco <new_branch_name> //   -- git checkout -b <new-branch-name> 
 
-// MERGE the specified branch into the CURRENT branch.
-//   -- git merge <specific-branch-name>
-git brm <specific_branch_name>
+// BRANCH MERGE the specified branch into the CURRENT branch.
+git bram  <specific_branch_name> //   -- git merge --nof <specific-branch-name>
 
-// DELETE the specified branch.
-//   -- git branch -d <branch-name>
-git brd <branch_name>
+// BRANCH DELETE the specified branch.
+git brad <branch_name> //   -- git branch -d <branch-name>
 
+// 3. BRANCH (LIST) LOCAL branches in the repository
+git bral OR git brall //    -- git branch   
 
-// 3. LIST all LOCAL branches in the repository
-//    -- git branch
-git brll   
+// 4. BRANCH (LIST) REMOTE branches.
+git brar OR git bralr //    -- git branch -r
 
-// 4. LIST all REMOTE branches.
-//    -- git branch -r
-git brlr
+// 3 & 4. BRANCH (LIST) ALL branches.
+git braa OR git brla //    -- git branch -a
+```s
 
-// 3 & 4. LIST all REMOTE branches.
-//    -- git branch -a
-git brla
-```
-
-## STAGING Related
+## STAGING ( sta_ ) Aliases
 ```csharp 
+// 0. STAGE (one) FILE to staging 
+git staf <filename>  //   --  git add <filename>
 
-// 0. Add One File to staging 
-//   --  git add <filename>
-git staf <filename>  // STA filename
-
-
-// 1. Add All Files to staging 
-//   --  git add . or git add –all
-git staa // Stage Add ALL                    
+// 1. STAGE ALL Files to staging 
+git staa    // --  git add . OR git add –all                    
   
-// 2. Commit with message 
-//   --  git commit -m “<message>” OR git commit –message “<message>”
-git com “<message>”          
+// 2. STAGE COMMIT with message 
+git stacom “<msg>” //   --  git commit -m “<msg>” OR git commit –message “<msg>”          
 
-// 1 & 2. Add all Files to staging and Commit with message.... All in One .:. BETTER .:.  
-//   -- git commit -a -m “<message>” OR git commit –all –message “<message>”
-git coma “<message>”  
+// 1 & 2. STAGE COMMIT ALL .:. Add all Files to staging and Commit with message.  
+git stacoma “<msg>” //   -- git commit -am “<msg>” OR git commit –all –message “<msg>”  
 
-// Remove One File from staging (but keep changes) 
-//   --  git reset HEAD <file-name>
-$ git stad <filename>
+// STAGE DELETE One File from staging (but keep changes) 
+$ git stad <filename> //   --  git reset HEAD <filename>
 
-// Remove ALL Files from staging (but keep changes)
-//   --  git reset HEAD
-$ git stada  // STage Delete ALL
-
-
+// STAGE DELETE ALL Files from staging (but keep changes)
+$ git stada  //   --  git reset HEAD
 ```
 
-## REMOTE Related
+## REMOTE Aliases
 ```csharp 
 // PULL / GET all files from Github 
-//   --  git pull
-git pull
+git pull //   --  git pull
   
 // PUSH / SEND all Changes TO Github 
-//   --  git push
-git push          
+git push //   --  git push          
 ```
-
-
-
-
-
-
-
-
-* brc : git branch .:. Lists all branches in the repository.
-```csharp 
-  git br // Lists all branches in the repository
-  git br branch_name // 
-  ```
-
-
-
-* brc for **checkout**: Create a branch   
-  ```csharp 
-  git out branch_name
-  ```
-
-
-* out for **checkout**: Switch branches or restore working tree files.   
-  ```csharp 
-  git out branch_name
-  ```
-
-
-* com for commit:   
-Record changes to the repository.
-
-* stat for status:   
-Show the working tree status.
-
-* bra for branch:   
-List, create, or delete branches.
-
-* log for log:   
-Show commit logs.
-
-* dif for diff:   
-Show changes between commits, commit and working tree, etc.  
-
-Using Shortcut Commands: After creating aliases, simply use them in place of the original 
-
