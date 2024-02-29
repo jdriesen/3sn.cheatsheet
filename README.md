@@ -92,7 +92,7 @@ git brla
 
 // 0. Add One File to staging 
 //   --  git add <filename>
-git sta <filename>  // STA filename
+git staf <filename>  // STA filename
 
 
 // 1. Add All Files to staging 
@@ -107,8 +107,6 @@ git com “<message>”
 //   -- git commit -a -m “<message>” OR git commit –all –message “<message>”
 git coma “<message>”  
 
-
-
 // Remove One File from staging (but keep changes) 
 //   --  git reset HEAD <file-name>
 $ git stad <filename>
@@ -116,6 +114,8 @@ $ git stad <filename>
 // Remove ALL Files from staging (but keep changes)
 //   --  git reset HEAD
 $ git stada  // STage Delete ALL
+
+
 ```
 
 ## REMOTE Related
