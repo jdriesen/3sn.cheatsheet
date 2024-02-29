@@ -55,23 +55,23 @@ On a Windows system, this file is located in the folder **C:\Users\\<user_name>\
 ```csharp 
 // 1. CREATE a new branch with the specified name. 
 //   -- git branch <branch-name>
-  git brc <branch-name>
+  git brc <branch_name>
 
 // 2. CHECK OUT / SWITCH TO a specified branch.
 //   -- git checkout <branch-name>
-git bro <branch-name>       
+git bro <branch_name>       
 
 // 1 & 2 CREATE & CHECK OUT / SWITCH TO a specified branch.
 //   -- git checkout -b <new-branch-name>
-git brco <new-branch-name> 
+git brco <new_branch_name> 
 
 // MERGE the specified branch into the CURRENT branch.
 //   -- git merge <specific-branch-name>
-git brm <specific-branch-name>
+git brm <specific_branch_name>
 
 // DELETE the specified branch.
 //   -- git branch -d <branch-name>
-git brd <branch-name>
+git brd <branch_name>
 
 
 // 3. LIST all LOCAL branches in the repository
@@ -91,17 +91,44 @@ git brla
 
 ## STAGING Related
 ```csharp 
+
+// 1. Add One File to staging 
+//   --  git add <filename>
+git sta <filename>  // STA filename
+
+
 // 1. Add All Files to staging 
 //   --  git add . or git add –all
-git adda                     
+git staa // Stage Add ALL                    
   
 // 2. Commit with message 
-//   --  git commit -m “<message>” or git commit –message “<message>”
+//   --  git commit -m “<message>” OR git commit –message “<message>”
 git com “<message>”          
 
 // 1 & 2. Add all Files to staging and Commit with message.... All in One .:. BETTER .:.  
-//   -- git commit -a -m “<message>” or git commit –all –message “<message>”
+//   -- git commit -a -m “<message>” OR git commit –all –message “<message>”
 git coma “<message>”  
+
+
+
+// Remove One File from staging (but keep changes) 
+//   --  git reset HEAD <file-name>
+$ git stad <filename>
+
+// Remove ALL Files from staging (but keep changes)
+//   --  git reset HEAD
+$ git stada  // STage Delete ALL
+```
+
+## REMOTE Related
+```csharp 
+// PULL / GET all files from Github 
+//   --  git pull
+git pull
+  
+// PUSH / SEND all Changes TO Github 
+//   --  git push
+git push          
 ```
 
 
