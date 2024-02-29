@@ -90,7 +90,7 @@ git brla
 ## STAGING Related
 ```csharp 
 
-// 1. Add One File to staging 
+// 0. Add One File to staging 
 //   --  git add <filename>
 git sta <filename>  // STA filename
 
