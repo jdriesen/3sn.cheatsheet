@@ -1,3 +1,5 @@
 solved bug 32
 
 solved bug 35
+
+solved bug 36
