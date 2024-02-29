@@ -75,7 +75,7 @@ git brar OR git bralr //    -- git branch -r
 
 // 3 & 4. BRANCH (LIST) ALL branches.
 git braa OR git brla //    -- git branch -a
-```s
+```
 
 ## STAGING ( sta_ ) Aliases
 ```csharp 
@@ -97,6 +97,30 @@ $ git stad <filename> //   --  git reset HEAD <filename>
 // STAGE DELETE ALL Files from staging (but keep changes)
 $ git stada  //   --  git reset HEAD
 ```
+
+## FREQUENTLY Used
+```csharp 
+
+// Create Branch 
+git braco <branchname>
+
+/* ------------------------ */
+/* --- Solved Your BUG ---- */
+/* ------------------------ */
+
+
+// Commit All your files to staging with a message
+git stacoma <msg>
+
+// checkout MAIN branch 
+git brao main
+
+// Merge branch into main
+git bram <branchname>
+
+  
+```
+
 
 ## REMOTE Aliases
 ```csharp 
