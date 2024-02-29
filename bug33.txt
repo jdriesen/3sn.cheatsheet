@@ -1,1 +1,4 @@
 solved bug33
+bug45
+
+bug 50
